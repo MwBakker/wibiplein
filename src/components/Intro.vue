@@ -40,7 +40,7 @@ onUnmounted(() => {
     display: flex;
     align-items: top;
     gap: 4rem;
-    min-height: calc(100vh - 160px);
+    height: 1024px;
     width: 100vw;
     position: relative;
     left: 50%;
@@ -75,11 +75,16 @@ onUnmounted(() => {
 
 .industrial-square {
     width: 100%;
-    height: 720px;
+    height: 812px;
     border: 2px solid #1B3b5b;
     border-right: none;
     border-radius: 20px 0 0 20px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.6); 
+    background-image: url('@/assets/hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
     box-shadow: 0 15px 35px rgba(27, 59, 91, 0.08);
     transition: transform 0.4s ease, border-color 0.4s ease;
 

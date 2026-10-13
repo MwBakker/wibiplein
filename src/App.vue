@@ -21,6 +21,6 @@ import Cards from './components/Cards.vue';
   max-width: 1280px;
   margin: 0 auto;
   position: relative;
-  padding-top: 182px;
+  padding-top: 320px;
 }
 </style>
