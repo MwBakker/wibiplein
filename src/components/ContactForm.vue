@@ -41,29 +41,24 @@ const handleSubmit = async () => {
 
 <template>
   <div class="contact-container">
-    <div class="contact-card">
+    <div class="contact-card card-widget">
       <h2>Neem contact op</h2>
       <p class="subtitle">Heb je een vraag over stalling of statiegeld? Vul het formulier in en we reageren snel!</p>
-
       <div v-if="isSubmitted" class="success-message">
         Bedankt voor je bericht! We nemen snel contact met je op.
       </div>
-
       <div v-if="errorMessage" class="error-message">
         {{ errorMessage }}
       </div>
-
       <form v-if="!isSubmitted" @submit.prevent="handleSubmit" class="contact-form">
         <div class="form-group">
           <label for="name">Naam</label>
           <input type="text" id="name" v-model="form.name" required placeholder="Je volledige naam">
         </div>
-
         <div class="form-group">
           <label for="email">E-mailadres</label>
           <input type="email" id="email" v-model="form.email" required placeholder="naam@voorbeeld.nl">
         </div>
-
         <div class="form-group">
           <label for="subject">Onderwerp</label>
           <select id="subject" v-model="form.subject">
@@ -72,7 +67,6 @@ const handleSubmit = async () => {
             <option value="anders">Anders</option>
           </select>
         </div>
-
         <div class="form-group" v-if="form.subject === 'stalling'">
           <label for="vehicleType">Type voertuig</label>
           <select id="vehicleType" v-model="form.vehicleType">
@@ -81,12 +75,11 @@ const handleSubmit = async () => {
             <option value="caravan">Caravan</option>
           </select>
         </div>
-
         <div class="form-group">
           <label for="message">Bericht</label>
-          <textarea id="message" v-model="form.message" rows="5" required placeholder="Typ hier je bericht..."></textarea>
+          <textarea id="message" v-model="form.message" rows="5" required
+            placeholder="Typ hier je bericht..."></textarea>
         </div>
-
         <button type="submit" class="submit-btn" :disabled="isLoading">
           {{ isLoading ? 'Bezig met verzenden...' : 'Verstuur bericht' }}
         </button>
@@ -104,18 +97,11 @@ const handleSubmit = async () => {
 }
 
 .contact-card {
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 16px;
-  border: 2px solid darkblue;
-  box-shadow: 0 10px 30px rgba(27, 59, 91, 0.08);
   width: 65%;
 
   h2 {
-    color: #1B3b5b;
     font-size: 28px;
     margin-bottom: 8px;
-    font-weight: 700;
   }
 }
 
@@ -142,7 +128,9 @@ const handleSubmit = async () => {
     color: #1B3b5b;
   }
 
-  input, select, textarea {
+  input,
+  select,
+  textarea {
     padding: 12px 16px;
     border: 1px solid #d1d9e0;
     border-radius: 8px;

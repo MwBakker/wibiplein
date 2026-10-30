@@ -4,6 +4,7 @@ import ContactForm from '@/components/ContactForm.vue';
 import Intro from '@/components/Intro.vue';
 import Footer from './components/Footer.vue';
 import Cards from './components/Cards.vue';
+import Deposits from './components/Deposits.vue'
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import Cards from './components/Cards.vue';
   <div id="content">
     <Intro />
     <Cards />
+    <Deposits />
     <ContactForm />
   </div>
   <Footer />

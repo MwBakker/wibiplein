@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from 'vue'
-import Card from './small/Card.vue'
+import Card from './small/Card/Card.vue'
+import CardContent from './small/Card/Content.vue'
 
 const isVisible = ref(false)
 const sectionRef = ref(null)
@@ -182,6 +183,9 @@ const getCardStyle = (index) => {
         <TransitionGroup name="fly-up" tag="div" class="cards-grid">
           <Card v-if="isVisible" v-for="(item, index) in stallingTypes" :key="item.id" :title="item.title"
             :description="item.description" :features="item.features" :icon-src="item.icon"
+            :style="getCardStyle(index)" />
+          <CardContent v-if="isVisible" v-for="(item, index) in stallingTypes" :key="item.id" :title="item.title"
+            :description="item.description"
             :style="getCardStyle(index)" />
         </TransitionGroup>
       </div>

@@ -33,6 +33,7 @@ onUnmounted(() => {
             </div>
         </Transition>
     </section>
+    <IntroBar />
 </template>
 
 <style scoped>
