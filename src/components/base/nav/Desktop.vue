@@ -26,10 +26,10 @@ onUnmounted(() => {
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li><router-link to="/stalling">Stalling</router-link></li>
-                    <li><router-link to="/statiegeld">Statiegeld</router-link></li>
-                    <li><router-link to="/statiegeld">Over ons</router-link></li>
-                    <li><router-link to="/contact">Contact</router-link></li>
+                    <li><a href="#storage">Stalling</a></li>
+                    <li><a href="#deposit">Statiegeld</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">Over ons</a></li>
                 </ul>
             </nav>
         </div>

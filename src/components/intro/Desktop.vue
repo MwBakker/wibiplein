@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import IntroBar from './IntroBar.vue'
 
 const scrolled = ref(false)
 
@@ -17,33 +18,39 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <section class="hero-section">
-        <Transition name="slide-left" appear>
-            <div class="hero-left">
-                <img src="@/assets/logo.png" alt="Wibi Plein Logo" id="hero-logo" :class="{ 'scrolled': scrolled }" />
-                <div class="hero-text">
-                    <h1>Professionele stalling voor campers, caravans & oldtimers</h1>
+    <div id="intro">
+        <section class="hero-section">
+            <Transition name="slide-left" appear>
+                <div class="hero-left">
+                    <img src="@/assets/logo.png" alt="Wibi Plein Logo" id="hero-logo"
+                        :class="{ 'scrolled': scrolled }" />
+                    <div class="hero-text">
+                        <h1>Professionele stalling voor campers, caravans & oldtimers</h1>
+                    </div>
                 </div>
-            </div>
-        </Transition>
-        <Transition name="slide-right" appear>
-            <div class="hero-right">
-                <div class="industrial-square">
+            </Transition>
+            <Transition name="slide-right" appear>
+                <div class="hero-right">
+                    <div class="industrial-square">
+                    </div>
                 </div>
-            </div>
-        </Transition>
-    </section>
-    <IntroBar />
+            </Transition>
+        </section>
+        <IntroBar />
+    </div>
 </template>
 
 <style scoped>
+#intro {
+    margin-bottom: 480px;
+}
+
 .hero-section {
     display: flex;
-    align-items: top;
     gap: 4rem;
-    height: 1024px;
     width: 100vw;
     position: relative;
+    margin-bottom: 48px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -80,7 +87,7 @@ onUnmounted(() => {
     border: 2px solid #1B3b5b;
     border-right: none;
     border-radius: 20px 0 0 20px;
-    background-color: rgba(255, 255, 255, 0.6); 
+    background-color: rgba(255, 255, 255, 0.6);
     background-image: url('@/assets/hero.jpg');
     background-repeat: no-repeat;
     background-position: center center;

@@ -24,7 +24,6 @@ body {
   min-height: 100vh;
   color: var(--color-text);
   background-color: var(--color-background);
-  /* Je externe SVG-patroonbestand */
   background-image: url('@/assets/background.svg');
   background-repeat: repeat;
   margin: 0;
@@ -35,4 +34,9 @@ body {
   font-size: 15px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
 }

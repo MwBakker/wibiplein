@@ -21,7 +21,7 @@ defineProps({
 </script>
 
 <template>
-  <section class="statiegeld-widget">
+  <section id="deposit">
     <div class="widget-card">
       <div class="badge">Statiegeld Service</div>
       <h2>{{ title }}</h2>
@@ -41,7 +41,7 @@ defineProps({
 </template>
 
 <style scoped>
-.statiegeld-widget {
+#deposit {
   max-width: 1100px;
   margin: 3rem auto;
   padding: 0 1.5rem;

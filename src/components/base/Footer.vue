@@ -7,15 +7,11 @@
                 <p>KvK: 12345678</p>
                 <p>BTW: NL123456789B01</p>
             </div>
-            
+
             <div id="map-container">
-                <iframe 
-                    title="Google Maps Locatie Wibi Plein"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.72828628373!2d6.8!3d52.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTLCsDM2JzAwLjAiTiA2wrA0OCcwMC4wIkU!5e0!3m2!1snl!2snl!4v1600000000000!5m2!1snl!2snl" 
-                    width="100%" 
-                    height="100%" 
-                    style="border:0;" 
-                    loading="lazy" 
+                <iframe title="Google Maps Locatie Wibi Plein"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.72828628373!2d6.8!3d52.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTLCsDM2JzAwLjAiTiA2wrA0OCcwMC4wIkU!5e0!3m2!1snl!2snl!4v1600000000000!5m2!1snl!2snl"
+                    width="100%" height="100%" style="border:0;" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
@@ -83,9 +79,13 @@
     margin-right: calc(-50vw + 50%);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .site-footer {
         padding: 30px 20px;
+    }
+
+    #map-container {
+        width: 100%;
     }
 
     .footer-content {

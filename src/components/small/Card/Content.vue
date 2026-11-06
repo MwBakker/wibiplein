@@ -27,4 +27,11 @@ defineProps({
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+h3 {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+
+</style>

@@ -40,7 +40,7 @@ const handleSubmit = async () => {
 </script>
 
 <template>
-  <div class="contact-container">
+  <section id="contact">
     <div class="contact-card card-widget">
       <h2>Neem contact op</h2>
       <p class="subtitle">Heb je een vraag over stalling of statiegeld? Vul het formulier in en we reageren snel!</p>
@@ -85,11 +85,11 @@ const handleSubmit = async () => {
         </button>
       </form>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped lang="scss">
-.contact-container {
+#contact {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,5 +194,11 @@ const handleSubmit = async () => {
   border-radius: 8px;
   margin-bottom: 20px;
   font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .contact-card{
+    width: 100%;
+  }
 }
 </style>
